@@ -38,7 +38,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html suppressHydrationWarning>
       <body className={inter.className}>
-        {children}
+        <ThemeProvider attribute="class">
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
