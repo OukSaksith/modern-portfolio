@@ -31,21 +31,6 @@ export default function HomePage() {
         </p>
       </Section>
 
-      <Section id="projects" title="Projects" badge={featuredTags.join(" · ")}>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p) => (
-            <motion.div
-              key={p.title}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.4 }}
-            >
-              <ProjectCard project={p} />
-            </motion.div>
-          ))}
-        </div>
-      </Section>
 
       <Section id="experience" title="Experience">
         <div className="space-y-6">
@@ -63,13 +48,6 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section id="skills" title="Skills">
-        <div className="flex flex-wrap gap-2">
-          {skills.map((s) => (
-            <SkillBadge key={s} label={s} />
-          ))}
-        </div>
-      </Section>
 
       <Section id="education" title="Education">
         <div className="space-y-6">
@@ -83,6 +61,30 @@ export default function HomePage() {
         <div className="space-y-6">
           {certifications.map((c) => (
             <CertificationItem key={`${c.issuer}-${c.title}`} item={c} />
+          ))}
+        </div>
+      </Section>
+      
+      <Section id="skills" title="Skills">
+        <div className="flex flex-wrap gap-2">
+          {skills.map((s) => (
+            <SkillBadge key={s} label={s} />
+          ))}
+        </div>
+      </Section>
+
+      <Section id="projects" title="Projects" badge={featuredTags.join(" · ")}>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((p) => (
+            <motion.div
+              key={p.title}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.4 }}
+            >
+              <ProjectCard project={p} />
+            </motion.div>
           ))}
         </div>
       </Section>

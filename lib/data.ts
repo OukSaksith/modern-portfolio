@@ -100,6 +100,7 @@ export type Experience = {
   period: string;
   location?: string;
   bullets: string[];
+  logo?: string; // Optional logo for the company
 };
 
 export type Education = {
@@ -107,6 +108,7 @@ export type Education = {
   school: string;
   years: string;
   coursework: string[];
+  logo?: string;
 };
 
 export const projects: Project[] = [
@@ -229,10 +231,11 @@ export const education: Education[] = [
       'IOS Mobile Application',
       'Linux Administration',
       'Advance Linux Administration'
-    ]
+    ],
+    logo: '/images/setec-logo.png'
   },
   {
-    degree: 'Bachelor of Science in Computer Science',
+    degree: 'Bachelor of Science in Computer Science and Engineering',
     school: 'Royal University of Phnom Penh',
     years: '2017 - 2021',
     coursework: [
@@ -260,7 +263,8 @@ export const education: Education[] = [
       'Khmer History and Khmer Civilization',
       'Mathematics and Math Lab',
       'Fundamental Computer Concepts'
-    ]
+    ],
+    logo: '/images/rupp-logo.png'
   }
 ];
 
