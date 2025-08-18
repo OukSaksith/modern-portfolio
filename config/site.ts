@@ -19,7 +19,7 @@ export const siteConfig = {
     { label: 'Skills', href: '#skills' },
     { label: 'Contact', href: '#contact' },
     { label: 'Education', href: '#education' },
-    { label: 'Certification|Completion', href: '#certified' },
+    { label: 'Certification', href: '#certified' },
   ]
 };
 

@@ -8,7 +8,7 @@ import { ArrowRight, Mail, MapPin } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="container py-20 sm:py-28">
+    <section className="container py-10 sm:py-10">
       <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
         <div>
           <motion.h1

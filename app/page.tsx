@@ -27,9 +27,7 @@ export default function HomePage() {
 
       <Section id="about" title="About">
         <p className="text-muted-foreground">
-          I’m a developer focused on building performant, accessible, and
-          delightful web apps. I enjoy solving complex problems with simple,
-          elegant solutions and shipping real value.
+         I hold a Bachelor’s degree in Computer Science and am currently pursuing a Master’s degree in Information Technology, demonstrating my commitment to lifelong learning in the tech field. With hands-on experience as a developer, I have a strong foundation in software development and problem-solving. My journey has also led me into the world of DevOps, where I’ve successfully completed projects that bridge the gap between development and operations, enhancing efficiency and collaboration. I am passionate about leveraging technology to create innovative solutions and continuously improving my skills to stay ahead in this ever-evolving industry.Let’s connect and collaborate!
         </p>
       </Section>
 
@@ -81,7 +79,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section id="certified" title="Certified / Completed">
+      <Section id="certified" title="Certification">
         <div className="space-y-6">
           {certifications.map((c) => (
             <CertificationItem key={`${c.issuer}-${c.title}`} item={c} />
