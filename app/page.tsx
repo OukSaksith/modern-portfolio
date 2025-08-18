@@ -18,6 +18,9 @@ import EducationItem from "@/components/education-item";
 import CertificationItem from "@/components/certification-item";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { siteConfig } from "@/config/site";
+
+const MAIL_SUBJECT = "Let's Connect";
 
 export default function HomePage() {
   return (
@@ -127,7 +130,7 @@ export default function HomePage() {
         <div className="mt-4">
           <a
             className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-primary-foreground hover:opacity-90"
-            href="mailto:you@example.com?subject=Project%20Inquiry"
+            href={`mailto:${siteConfig.email}?subject=${encodeURIComponent(MAIL_SUBJECT)}`}
           >
             Email me
           </a>

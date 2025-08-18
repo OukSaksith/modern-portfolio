@@ -5,6 +5,7 @@
 import { motion } from 'framer-motion';
 import { siteConfig } from '@/config/site';
 import { ArrowRight, Mail, MapPin } from 'lucide-react';
+const MAIL_SUBJECT = "Let's Connect";
 
 export default function Hero() {
 
@@ -81,7 +82,7 @@ export default function Hero() {
                 View Projects <ArrowRight className="size-4" />
               </a>
               <a
-                href={`mailto:${siteConfig.email}`}
+                href={`mailto:${siteConfig.email}?subject=${encodeURIComponent(MAIL_SUBJECT)}`}
                 className="inline-flex items-center gap-2 rounded-md border px-4 py-2 hover:bg-accent"
               >
                 <Mail className="size-4" /> Contact

@@ -38,9 +38,9 @@ export default function Section({
             </span>
           ) : null}
         </div>
-        <div className="flex justify-end items-center mt-2">
+        <div className="flex justify-start items-center mt-2">
               <div
-                className="mt-1 h-2 w-20 rounded-full opacity-90 bg-purple-200"
+                className="mt-1 h-2 w-40 rounded-full opacity-90 bg-purple-200"
               />
         </div>
       </div>
