@@ -10,7 +10,7 @@ export const siteConfig = {
   url: process.env['NEXT_PUBLIC_SITE_URL'] || 'https://your-domain.com',
   socials: {
     github: 'https://github.com/OukSaksith/',
-    linkedin: 'www.linkedin.com/in/ouksaksith-software-developer/',
+    linkedin: 'https://www.linkedin.com/in/ouksaksith-software-developer/',
     twitter: 'https://x.com/your-handle',
     website: process.env['NEXT_PUBLIC_SITE_URL'] || 'https://your-domain.com'
   },
