@@ -312,30 +312,30 @@ export type Skill = {
 
 export const skills: Skill[] = [
   { label: 'Spring Boot', icon: '🌱' },
-  { label: 'TypeScript', icon: '🟦' },
-  { label: 'Tailwind CSS', icon: '🌬️' },
-  { label: 'NestJS', icon: '🦉' },
   { label: 'PostgreSQL', icon: '🐘' },
-  { label: 'JasperReports', icon: '📊' },
-  { label: 'SQL Server', icon: '🗄️' },
   { label: 'MySQL', icon: '🐬' },
-  { label: 'Bootstrap', icon: '🅱️' },
-  { label: 'Next.js', icon: '⏭️' },
-  { label: 'React.js', icon: '⚛️' },
-  { label: 'DevOps', icon: '⚙️' },
-  { label: 'Laravel', icon: '🎵' },
-  { label: 'PHP', icon: '🐘' },
-  { label: 'Java', icon: '☕' },
-  { label: 'JavaScript', icon: '🟨' },
+
+  { label: 'Git', icon: '🐙' },
   { label: 'Docker', icon: '🐳' },
   { label: 'Jenkins', icon: '🟩' },
-  { label: 'Git', icon: '🐙' },
-  { label: 'Kubernetes', icon: '☸️' },
   { label: 'Ansible', icon: '📦' },
   { label: 'AWS', icon: '☁️' },
-  { label: 'Github', icon: '🐙' },
-  { label: 'Nginx', icon: '⚙️' },
-  { label: 'CI/CD', icon: '🔄' }
+  { label: 'CI/CD', icon: '🔄' },
+  { label: 'DevOps', icon: '⚙️' },
+
+  { label: 'JavaScript', icon: '🟨' },
+  { label: 'TypeScript', icon: '🟦' },
+  { label: 'Next.js', icon: '⏭️' },
+  { label: 'React.js', icon: '⚛️' },
+  { label: 'NestJS', icon: '🦉' },
+
+  
+  { label: 'Bootstrap', icon: '🅱️' },
+  { label: 'Tailwind CSS', icon: '🌬️' },
+
+  { label: 'Laravel', icon: '🎵' },
+  { label: 'JasperReports', icon: '📊' }
+
 ];
 
-export const featuredTags = ['Spring Boot', 'Next.js', 'TypeScript', 'Tailwind'];
+export const featuredTags = ['Spring Boot', 'Next.js', 'PostgreSQL', 'DevOps'];
