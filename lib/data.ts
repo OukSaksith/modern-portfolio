@@ -107,13 +107,18 @@ export type Project = {
   image?: string;
 };
 
-export type Experience = {
-  company: string;
+
+export type ExperienceRole = {
   role: string;
   period: string;
   location?: string;
   bullets: string[];
-  logo?: string; // Optional logo for the company
+};
+
+export type ExperienceCompany = {
+  company: string;
+  logo?: string;
+  roles: ExperienceRole[];
 };
 
 export type Education = {
@@ -143,81 +148,100 @@ export const projects: Project[] = [
   },
 ];
 
-export const experience: Experience[] = [
+export const experience: ExperienceCompany[] = [
   {
     company: 'IBANK Cambodia',
-    role: 'Backend and API Developer',
-    period: 'Aug 2025 — Current',
-    location: 'On-site',
-    bullets: [
-      ' Joint develops and implementation related system, backend system development, and API for mobile application.',
-      ' Work with IT and related stack-holder to test new enchantment and new product to ensure products has been completed and deployed to production successfully',
-      ' Executed the checklists and report the task progress to supervisor',
-      ' Support the users including the procedural documentation and relevant reports related system',
-      ' Provide the training if the related system has been implemented',
-      ' Report the task/project progress to supervisor',
-      ' Any related tasks may assign by supervisor or management from time to time.'
+    logo: undefined,
+    roles: [
+      {
+        role: 'Backend and API Developer',
+        period: 'Aug 2025 — Current',
+        location: 'On-site',
+        bullets: [
+          ' Joint develops and implementation related system, backend system development, and API for mobile application.',
+          ' Work with IT and related stack-holder to test new enchantment and new product to ensure products has been completed and deployed to production successfully',
+          ' Executed the checklists and report the task progress to supervisor',
+          ' Support the users including the procedural documentation and relevant reports related system',
+          ' Provide the training if the related system has been implemented',
+          ' Report the task/project progress to supervisor',
+          ' Any related tasks may assign by supervisor or management from time to time.'
+        ]
+      }
     ]
   },
   {
     company: 'BICBank Cambodia',
-    role: 'Backend and API Developer',
-    period: 'Jul 2022 — Aug 2025',
-    location: 'On-site',
-    bullets: [
-      ' Joint develops and implementation related system, backend system development, and API for mobile application.',
-      ' Work with IT and related stack-holder to test new enchantment and new product to ensure products has been completed and deployed to production successfully',
-      ' Executed the checklists and report the task progress to supervisor',
-      ' Support the users including the procedural documentation and relevant reports related system',
-      ' Provide the training if the related system has been implemented',
-      ' Report the task/project progress to supervisor',
-      ' Any related tasks may assign by supervisor or management from time to time.'
+    logo: undefined,
+    roles: [
+      {
+        role: 'Backend and API Developer',
+        period: 'Jul 2022 — Aug 2025',
+        location: 'On-site',
+        bullets: [
+          ' Joint develops and implementation related system, backend system development, and API for mobile application.',
+          ' Work with IT and related stack-holder to test new enchantment and new product to ensure products has been completed and deployed to production successfully',
+          ' Executed the checklists and report the task progress to supervisor',
+          ' Support the users including the procedural documentation and relevant reports related system',
+          ' Provide the training if the related system has been implemented',
+          ' Report the task/project progress to supervisor',
+          ' Any related tasks may assign by supervisor or management from time to time.'
+        ]
+      }
     ]
   },
   {
     company: 'TURBOTECH',
-    role: 'Backend Developer',
-    period: 'Dec 2021 — Jul 2022',
-    location: 'On-site',
-    bullets: [
-      ' Doing back-end development to build, to maintain, restful API, web application integrity.',
-      ' Used Google Maps API to produce the application related mapping.',
-      ' Validated third-party code to comply with internal standards and technical requirements.',
-      ' Discussed site and app requirements with clients to produce actionable development plans.',
-      ' Provide the training if the related system has been implemented',
-      ' Report the task/project progress to supervisor',
-      ' Any related tasks may assign by supervisor or management from time to time.'
-    ]
-  },
-  {
-    company: 'TURBOTECH',
-    role: 'Web Developer',
-    period: 'May 2021 — Dec 2021',
-    location: 'On-site',
-    bullets: [
-      ' Doing back-end development to build, to maintain, restful API, web application integrity.',
-      ' Used Google Maps API to produce the application related mapping.',
-      ' Validated third-party code to comply with internal standards and technical requirements.',
-      ' Discussed site and app requirements with clients to produce actionable development plans.',
-      ' Provide the training if the related system has been implemented',
-      ' Report the task/project progress to supervisor',
-      ' Any related tasks may assign by supervisor or management from time to time.'
+    logo: undefined,
+    roles: [
+      {
+        role: 'Backend Developer',
+        period: 'Dec 2021 — Jul 2022',
+        location: 'On-site',
+        bullets: [
+          ' Doing back-end development to build, to maintain, restful API, web application integrity.',
+          ' Used Google Maps API to produce the application related mapping.',
+          ' Validated third-party code to comply with internal standards and technical requirements.',
+          ' Discussed site and app requirements with clients to produce actionable development plans.',
+          ' Provide the training if the related system has been implemented',
+          ' Report the task/project progress to supervisor',
+          ' Any related tasks may assign by supervisor or management from time to time.'
+        ]
+      },
+      {
+        role: 'Web Developer',
+        period: 'May 2021 — Dec 2021',
+        location: 'On-site',
+        bullets: [
+          ' Doing back-end development to build, to maintain, restful API, web application integrity.',
+          ' Used Google Maps API to produce the application related mapping.',
+          ' Validated third-party code to comply with internal standards and technical requirements.',
+          ' Discussed site and app requirements with clients to produce actionable development plans.',
+          ' Provide the training if the related system has been implemented',
+          ' Report the task/project progress to supervisor',
+          ' Any related tasks may assign by supervisor or management from time to time.'
+        ]
+      }
     ]
   },
   {
     company: 'ABA Bank',
-    role: 'Epayment Support Officer',
-    period: 'May 2020 — Mar 2021',
-    location: 'On-site',
-    bullets: [
-      ' Conduct end-to-end user testing (SIT, UAT, etc....) on new and modified E-Payment systems to identify improvement points and ensure smooth system for internal stakeholders before its launching for operations.',
-      ' Work closely with related teams (card system, digital, IT) to conduct testing and follow up on further improvements of the systems after testing and feedback are delivered.',
-      ' Draft and prepare confirmation on test case and its report to serve as references for further processing.',
-      ' Check and troubleshoot issues and logging in E-Payment.',
-      ' Department to facilitate smooth system operations.',
-      ' Process daily incoming and outgoing files to external payment schemes (MC/VS/UPI) to manage correct recordings of these products.',
-      ' Keep tracking on daily report and escalate critical issues to line manager or relevant stakeholders for a timely and proper solution to ensure the assigned projects are achieved within the timeline and scope.',
-      ' Handle tasks assigned by Line Manager.'
+    logo: undefined,
+    roles: [
+      {
+        role: 'Epayment Support Officer',
+        period: 'May 2020 — Mar 2021',
+        location: 'On-site',
+        bullets: [
+          ' Conduct end-to-end user testing (SIT, UAT, etc....) on new and modified E-Payment systems to identify improvement points and ensure smooth system for internal stakeholders before its launching for operations.',
+          ' Work closely with related teams (card system, digital, IT) to conduct testing and follow up on further improvements of the systems after testing and feedback are delivered.',
+          ' Draft and prepare confirmation on test case and its report to serve as references for further processing.',
+          ' Check and troubleshoot issues and logging in E-Payment.',
+          ' Department to facilitate smooth system operations.',
+          ' Process daily incoming and outgoing files to external payment schemes (MC/VS/UPI) to manage correct recordings of these products.',
+          ' Keep tracking on daily report and escalate critical issues to line manager or relevant stakeholders for a timely and proper solution to ensure the assigned projects are achieved within the timeline and scope.',
+          ' Handle tasks assigned by Line Manager.'
+        ]
+      }
     ]
   }
 ];
