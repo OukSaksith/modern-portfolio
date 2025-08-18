@@ -7,6 +7,18 @@ import { siteConfig } from '@/config/site';
 import { ArrowRight, Mail, MapPin } from 'lucide-react';
 
 export default function Hero() {
+
+  // Smooth scroll handler
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const el = document.querySelector(href);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <section className="container py-10 sm:py-10">
       <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
@@ -25,8 +37,27 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
           >
-            {siteConfig.role} • <span className="inline-flex items-center gap-1"><MapPin className="size-4" />{siteConfig.location}</span>
+            {siteConfig.role} • {siteConfig.secRole}
           </motion.p>
+          <motion.p
+            className="mt-2 text-base text-muted-foreground"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.12, duration: 0.5 }}
+          >
+            <span className="inline-flex items-center gap-1"><MapPin className="size-4" />{siteConfig.location}</span>
+          </motion.p>
+          <motion.p
+            className="mt-2 text-base text-muted-foreground"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.13, duration: 0.5 }}
+          >
+            <span className="inline-flex items-center gap-1"><Mail className="size-4 mr-1" />{siteConfig.email}</span>
+            <br />
+            <span className="inline-flex items-center gap-1"><span className="inline-block align-middle mr-1">📞</span>{siteConfig.phone}</span>
+          </motion.p>
+          
           <motion.p
             className="mt-6 text-muted-foreground"
             initial={{ opacity: 0, y: 10 }}
@@ -43,7 +74,7 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <a
-              href="#projects"
+              onClick={(e) => handleNavClick(e, '#projects')}
               className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-primary-foreground hover:opacity-90"
             >
               View Projects <ArrowRight className="size-4" />
@@ -58,16 +89,18 @@ export default function Hero() {
         </div>
 
         <motion.div
-          className="relative h-56 sm:h-72 lg:h-80 rounded-2xl border overflow-hidden bg-gradient-to-br from-blue-500/20 via-fuchsia-500/20 to-emerald-500/20"
+          className="relative h-56 sm:h-72 lg:h-80 overflow-visible flex items-center justify-center bg-transparent"
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.1, duration: 0.6 }}
         >
-          <div className="absolute inset-0">
-            <div className="absolute -left-10 -top-10 size-40 rounded-full bg-blue-500/25 blur-3xl animate-float" />
-            <div className="absolute -right-10 -bottom-10 size-48 rounded-full bg-fuchsia-500/25 blur-3xl animate-float" />
-            <div className="absolute left-1/3 top-1/3 size-24 rounded-full bg-emerald-500/25 blur-3xl animate-float" />
-          </div>
+          {/* Main image */}
+          <img
+            src="/images/hero_pic.png"
+            alt="Profile"
+            className="h-full w-auto object-cover"
+            style={{ objectFit: 'cover', border: 'none', borderRadius: 0, background: 'transparent' }}
+          />
         </motion.div>
       </div>
     </section>

@@ -20,6 +20,17 @@ function ThemeToggle() {
 }
 
 export default function Navbar() {
+  // Smooth scroll handler
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const el = document.querySelector(href);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 border-b backdrop-blur supports-[backdrop-filter]:bg-background/70 bg-gradient-to-r from-white via-gray-100 to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900">
       <div className="container flex h-14 items-center justify-between">
@@ -28,7 +39,12 @@ export default function Navbar() {
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           {siteConfig.nav.map((item) => (
-            <a key={item.href} href={item.href} className="text-muted-foreground hover:text-foreground">
+            <a
+              key={item.href}
+              href={item.href}
+              className="text-muted-foreground hover:text-foreground"
+              onClick={(e) => handleNavClick(e, item.href)}
+            >
               {item.label}
             </a>
           ))}
