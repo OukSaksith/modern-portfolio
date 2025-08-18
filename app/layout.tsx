@@ -6,7 +6,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import { education, certifications } from '@/lib/data';
-
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -40,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.className}>
         <ThemeProvider attribute="class">
           {children}
+          <ScrollToTopButton />
         </ThemeProvider>
       </body>
     </html>
