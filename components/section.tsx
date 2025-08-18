@@ -25,7 +25,7 @@ export default function Section({
   className?: string;
 }) {
   return (
-    <section id={id} className={cn('container py-10 sm:py-10', className)}>
+    <section id={id} className={cn('container py-5 sm:py-5', className)}>
       <div className="mb-8">
         <div className="flex items-center gap-2">
           <h2 className="text-2xl font-semibold flex items-center gap-2">

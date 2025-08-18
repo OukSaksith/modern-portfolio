@@ -68,7 +68,7 @@ export default function HomePage() {
       <Section id="skills" title="Skills">
         <div className="flex flex-wrap gap-2">
           {skills.map((s) => (
-            <SkillBadge key={s} label={s} />
+            <SkillBadge key={s.label} label={s.label} icon={s.icon} />
           ))}
         </div>
       </Section>

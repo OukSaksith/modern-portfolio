@@ -37,7 +37,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
           >
-            {siteConfig.role} • {siteConfig.secRole}
+             • {siteConfig.role} • {siteConfig.secRole}
           </motion.p>
           <motion.p
             className="mt-2 text-base text-muted-foreground"

@@ -3,6 +3,7 @@ export type Certification = {
   issuer: string;
   year?: string;
   description?: string;
+  logo?: string;  
 };
 
 export const certifications: Certification[] = [
@@ -10,73 +11,85 @@ export const certifications: Certification[] = [
     title: 'NestJS Zero to Hero - Modern TypeScript Back-end Development',
     issuer: 'Udemy',
     year: '2025',
-    description: 'Completed training on NestJS, focusing on modern TypeScript back-end development practices.'
+    description: 'Completed training on NestJS, focusing on modern TypeScript back-end development practices.',
+    logo: '/images/udemy_logo.jpg'
   },
   {
     title: 'AWS Academy Graduate - AWS Academy Cloud Architecting',
     issuer: 'Amazon Web Services Training and Certification',
     year: '2025',
-    description: 'Completed training on cloud architecting using AWS services.'
+    description: 'Completed training on cloud architecting using AWS services.',
+    logo: '/images/amazon_web_services_logo.jpg'
   },
   {
     title: 'AWS Academy Graduate - AWS Academy Cloud Operations',
     issuer: 'Amazon Web Services Training and Certification',
     year: '2025',
-    description: 'Completed training on cloud operations using AWS services.'
+    description: 'Completed training on cloud operations using AWS services.',
+    logo: '/images/amazon_web_services_logo.jpg'
   },
   {
     title: 'AWS Academy Graduate - AWS Academy Cloud Security Foundations',
     issuer: 'Amazon Web Services Training and Certification',
     year: '2025',
-    description: 'Completed training on cloud security foundations using AWS services.'
+    description: 'Completed training on cloud security foundations using AWS services.',
+    logo: '/images/amazon_web_services_logo.jpg'
   },
   {
     title: 'AWS Academy Graduate - AWS Academy Cloud Foundations',
     issuer: 'Amazon Web Services Training and Certification',
     year: '2025',
-    description: 'Completed training on cloud foundations using AWS services.'
+    description: 'Completed training on cloud foundations using AWS services.',
+    logo: '/images/amazon_web_services_logo.jpg'
   },
   {
     title: 'AWS Academy Graduate - AWS Academy Machine Learning Foundations',
     issuer: 'Amazon Web Services Training and Certification',
     year: '2025',
-    description: 'Completed training on machine learning foundations using AWS services.'
+    description: 'Completed training on machine learning foundations using AWS services.',
+    logo: '/images/amazon_web_services_logo.jpg'
   },
   {
     title: 'DevOps Engineering',
     issuer: 'Center of Science and Technology Advanced Development',
     year: '2024',
-    description: 'Completed DevOps training covering CI/CD, containerization, and cloud deployment.'
+    description: 'Completed DevOps training covering CI/CD, containerization, and cloud deployment.',
+    logo: '/images/istad.png'
   },
   {
     title: 'React 18: Intermediate Topics',
     issuer: 'Udemy',
     year: '2024',
-    description: 'Completed training on React 18, focusing on intermediate concepts and best practices.'
+    description: 'Completed training on React 18, focusing on intermediate concepts and best practices.',
+    logo: '/images/codewithmosh_logo.jpg'
   },
   {
     title: 'Building web APIs with Rust (Advanced)',
     issuer: 'Udemy',
     year: '2024',
-    description: 'Completed training on building web APIs using Rust, focusing on best practices and practical implementation.'
+    description: 'Completed training on building web APIs using Rust, focusing on best practices and practical implementation.',
+    logo: '/images/udemy_logo.jpg'
   },
   {
     title: 'Building web APIs with Rust (beginners)',
     issuer: 'Udemy',
     year: '2023',
-    description: 'Completed training on building web APIs using Rust, focusing on best practices and practical implementation.'
+    description: 'Completed training on building web APIs using Rust, focusing on best practices and practical implementation.',
+    logo: '/images/udemy_logo.jpg'
   },
   {
     title: 'Web Design',
     issuer: 'Korea Software HRD Center',
     year: '2020',
-    description: 'Completed web design training with a focus on user experience and responsive design.'
+    description: 'Completed web design training with a focus on user experience and responsive design.',
+    logo: '/images/kshrd-logo.png'
   },
   {
     title: 'Android Development',
     issuer: 'Korea Software HRD Center',
     year: '2020',
-    description: 'Completed Android development training with a focus on mobile app development and best practices.'
+    description: 'Completed Android development training with a focus on mobile app development and best practices.',
+    logo: '/images/kshrd-logo.png'
   },
   {
     title: 'Pedagogy',
@@ -268,21 +281,37 @@ export const education: Education[] = [
   }
 ];
 
-export const skills = [
-  'Spring Boot',
-  'TypeScript',
-  'React',
-  'Tailwind CSS',
-  'NestJS',
-  'PostgreSQL',
-  'JasperReports',
-  'SQL Server',
-  'MySQL',
-  'Bootstrap',
-  'Next.js',
-  'DevOps',
-  'Laravel',
-  'PHP'
+export type Skill = {
+  label: string;
+  icon?: string; // icon name or path
+};
+
+export const skills: Skill[] = [
+  { label: 'Spring Boot', icon: '🌱' },
+  { label: 'TypeScript', icon: '🟦' },
+  { label: 'Tailwind CSS', icon: '🌬️' },
+  { label: 'NestJS', icon: '🦉' },
+  { label: 'PostgreSQL', icon: '🐘' },
+  { label: 'JasperReports', icon: '📊' },
+  { label: 'SQL Server', icon: '🗄️' },
+  { label: 'MySQL', icon: '🐬' },
+  { label: 'Bootstrap', icon: '🅱️' },
+  { label: 'Next.js', icon: '⏭️' },
+  { label: 'React.js', icon: '⚛️' },
+  { label: 'DevOps', icon: '⚙️' },
+  { label: 'Laravel', icon: '🎵' },
+  { label: 'PHP', icon: '🐘' },
+  { label: 'Java', icon: '☕' },
+  { label: 'JavaScript', icon: '🟨' },
+  { label: 'Docker', icon: '🐳' },
+  { label: 'Jenkins', icon: '🟩' },
+  { label: 'Git', icon: '🐙' },
+  { label: 'Kubernetes', icon: '☸️' },
+  { label: 'Ansible', icon: '📦' },
+  { label: 'AWS', icon: '☁️' },
+  { label: 'Github', icon: '🐙' },
+  { label: 'Nginx', icon: '⚙️' },
+  { label: 'CI/CD', icon: '🔄' }
 ];
 
 export const featuredTags = ['Spring Boot', 'Next.js', 'TypeScript', 'Tailwind'];
