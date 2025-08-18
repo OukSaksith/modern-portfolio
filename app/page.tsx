@@ -116,8 +116,7 @@ export default function HomePage() {
 
       <Section id="contact" title="Contact">
         <p className="text-muted-foreground">
-          Want to collaborate or have a project in mind? Reach out and let’s
-          talk.
+          Let’s work on something amazing together—get in touch!
         </p>
         <div className="mt-4">
           <a

@@ -6,7 +6,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import { education, certifications } from '@/lib/data';
-import ScrollToTopButton from '@/components/ScrollToTopButton';
+import ScrollToTopButton from '@/components/scroll-to-top-button';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
