@@ -1,18 +1,17 @@
 export const siteConfig = {
-  name: process.env['NEXT_PUBLIC_SITE_NAME'] || 'Ouk Saksith',
-  role: process.env['NEXT_PUBLIC_SITE_ROLE'] || 'Full-Stack Developer',
-  secRole: process.env['NEXT_PUBLIC_SITE_SEC_ROLE'] || 'DevOps Engineering',
-  location: process.env['NEXT_PUBLIC_SITE_LOCATION'] || 'Phnom Penh, Cambodia',
-  email: process.env['NEXT_PUBLIC_SITE_EMAIL'] || 'you@example.com',
-  phone: process.env['NEXT_PUBLIC_SITE_PHONE'] || '+855 12 345 678',
-  summary:
-    process.env['NEXT_PUBLIC_SITE_SUMMARY'] || 'I craft fast, accessible, and delightful web experiences with Next.js, TypeScript, and modern tooling.',
-  url: process.env['NEXT_PUBLIC_SITE_URL'] || 'https://your-domain.com',
+  name: 'OUK Saksith',
+  role: 'Backend Developer',
+  secRole: 'DevOps Engineering',
+  location: 'Phnom Penh, Cambodia',
+  email: 'ouksaksith11@gmail.com',
+  phone: '+855 92 984 470',
+  summary: 'Creating efficient, robust, and seamless backend experiences using Spring Boot, TypeScript, and DevOps tools.',
+  url: 'https://ouksaksith-portfolio.vercel.app',
   socials: {
     github: 'https://github.com/OukSaksith/',
     linkedin: 'https://www.linkedin.com/in/ouksaksith-software-developer/',
     twitter: 'https://x.com/your-handle',
-    website: process.env['NEXT_PUBLIC_SITE_URL'] || 'https://your-domain.com'
+    website: 'https://ouksaksith-portfolio.vercel.app'
   },
   nav: [
     { label: 'About', href: '#about' },
