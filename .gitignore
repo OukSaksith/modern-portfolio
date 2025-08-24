@@ -4,7 +4,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-package-lock.json
 
 # Next
 .next
@@ -20,4 +19,3 @@ out
 
 # Mac
 .DS_Store
-.vercel
